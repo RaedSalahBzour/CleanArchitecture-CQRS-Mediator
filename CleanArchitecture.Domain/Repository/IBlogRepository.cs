@@ -7,7 +7,7 @@ namespace CleanArchitecture.Domain.Repository
         Task<List<Blog>> GetAllBlogsAsync();
         Task<Blog> GetBlogByIdAsync(int id);
         Task<Blog> CreateBlogAsync(Blog blog);
-        Task<Blog> UpdateBlogAsync(int id, Blog blog);
-        Task<Blog> DeleteBlogAsync(int id);
+        Task<int> UpdateBlogAsync(int id, Blog blog);
+        Task<int> DeleteBlogAsync(int id);
     }
 }

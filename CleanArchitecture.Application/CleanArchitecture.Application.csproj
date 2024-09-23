@@ -13,9 +13,6 @@
   <ItemGroup>
     <Folder Include="Common\Behaviors\" />
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="Features\Blogs\Commands\CreateBlog\" />
-    <Folder Include="Features\Blogs\Commands\DeleteBlog\" />
-    <Folder Include="Features\Blogs\Commands\UpdateBlog\" />
   </ItemGroup>
 
   <ItemGroup>
