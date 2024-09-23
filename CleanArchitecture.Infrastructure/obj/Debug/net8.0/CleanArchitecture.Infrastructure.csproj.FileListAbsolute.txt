@@ -16,3 +16,5 @@ C:\Users\BisanCo\Desktop\.NET\CleanArchitecture\CleanArchitecture.Infrastructure
 C:\Users\BisanCo\Desktop\.NET\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net8.0\refint\CleanArchitecture.Infrastructure.dll
 C:\Users\BisanCo\Desktop\.NET\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net8.0\CleanArchitecture.Infrastructure.pdb
 C:\Users\BisanCo\Desktop\.NET\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net8.0\ref\CleanArchitecture.Infrastructure.dll
+C:\Users\BisanCo\Desktop\.NET\CleanArchitecture\CleanArchitecture.Infrastructure\bin\Debug\net8.0\CleanArchitecture.Infrastructure.runtimeconfig.json
+C:\Users\BisanCo\Desktop\.NET\CleanArchitecture\CleanArchitecture.Infrastructure\obj\Debug\net8.0\CleanArchitecture.Infrastructure.genruntimeconfig.cache
