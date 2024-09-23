@@ -12,13 +12,11 @@
 
   <ItemGroup>
     <Folder Include="Common\Behaviors\" />
-    <Folder Include="Common\Mappings\" />
     <Folder Include="Common\Exceptions\" />
-    <Folder Include="Features\Blog\Commands\CreateBlog\" />
-    <Folder Include="Features\Blog\Commands\DeleteBlog\" />
-    <Folder Include="Features\Blog\Commands\UpdateBlog\" />
-    <Folder Include="Features\Blog\Queries\GetAllBlogs\" />
-    <Folder Include="Features\Blog\Queries\GetBlogById\" />
+    <Folder Include="Features\Blogs\Commands\CreateBlog\" />
+    <Folder Include="Features\Blogs\Commands\DeleteBlog\" />
+    <Folder Include="Features\Blogs\Commands\UpdateBlog\" />
+    <Folder Include="Features\Blogs\Queries\GetBlogById\" />
   </ItemGroup>
 
   <ItemGroup>
