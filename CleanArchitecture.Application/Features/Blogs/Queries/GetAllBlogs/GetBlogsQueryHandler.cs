@@ -1,31 +1,22 @@
-﻿using CleanArchitecture.Domain.Repository;
+﻿using AutoMapper;
+using CleanArchitecture.Domain.Repository;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchitecture.Application.Features.Blogs.Queries.GetAllBlogs
 {
     public class GetBlogsQueryHandler : IRequestHandler<GetBlogsQuery, List<BlogDto>>
     {
-        private readonly IBlogRepository blogRepository;
-
-        public GetBlogsQueryHandler(IBlogRepository blogRepository)
+        private readonly IBlogRepository _blogRepository;
+        private readonly IMapper _mapper;
+        public GetBlogsQueryHandler(IBlogRepository blogRepository, IMapper mapper)
         {
-            this.blogRepository = blogRepository;
+            _blogRepository = blogRepository;
+            _mapper = mapper;
         }
         public async Task<List<BlogDto>> Handle(GetBlogsQuery request, CancellationToken cancellationToken)
         {
-            var blogs = await blogRepository.GetAllBlogsAsync();
-            var blogList = blogs.Select(x => new BlogDto
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Author = x.Author,
-                Description = x.Description
-            }).ToList();
+            var blogs = await _blogRepository.GetAllBlogsAsync();
+            var blogList = _mapper.Map<List<BlogDto>>(blogs);
             return blogList;
         }
     }
