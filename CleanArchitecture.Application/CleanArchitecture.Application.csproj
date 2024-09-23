@@ -10,4 +10,22 @@
     <ProjectReference Include="..\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\Behaviors\" />
+    <Folder Include="Common\Mappings\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Features\Blog\Commands\CreateBlog\" />
+    <Folder Include="Features\Blog\Commands\DeleteBlog\" />
+    <Folder Include="Features\Blog\Commands\UpdateBlog\" />
+    <Folder Include="Features\Blog\Queries\GetAllBlogs\" />
+    <Folder Include="Features\Blog\Queries\GetBlogById\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
 </Project>
