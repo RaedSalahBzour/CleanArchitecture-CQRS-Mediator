@@ -19,7 +19,8 @@ namespace CleanArchitecture.Application.Features.Blogs.Commands.CreateBlog
 
         public async Task<BlogDto> Handle(CreateBlogCommand request, CancellationToken cancellationToken)
         {
-            var blogEntity = _mapper.Map<Blog>(request);
+            //var blogEntity = new Blog() { Author = request.Author, Description = request.Description, Name = request.Name };
+            var blogEntity = _mapper.Map<Blog>(request);//we ignore the id in the ctor of the mappingProfile 
             var result = await _blogRepository.CreateBlogAsync(blogEntity);
             return _mapper.Map<BlogDto>(result);
         }

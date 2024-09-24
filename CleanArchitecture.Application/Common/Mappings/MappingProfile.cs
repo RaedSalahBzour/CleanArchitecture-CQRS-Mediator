@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CleanArchitecture.Application.Common.Mappings;
-using System;
-using System.Linq;
+using CleanArchitecture.Application.Features.Blogs.Commands.CreateBlog;
+using CleanArchitecture.Domain.Entity;
 using System.Reflection;
 
 public class MappingProfile : Profile
@@ -9,6 +9,11 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+        CreateMap<CreateBlogCommand, Blog>()
+           .ForMember(dest => dest.Id, opt => opt.Ignore());
+        //CreateMap<UpdateBlogCommand, Blog>()
+        //   .ForMember(dest => dest.Id, src => src.MapFrom(src => src.blogId));
+
     }
 
     private void ApplyMappingsFromAssembly(Assembly assembly)

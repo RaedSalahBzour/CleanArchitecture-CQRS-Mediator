@@ -41,7 +41,7 @@ namespace CleanArchitecture.Infrastructure.Repository
         {
             return await _dbContext.Blogs.Where(model => model.Id == id)
                    .ExecuteUpdateAsync(setters => setters
-                   .SetProperty(m => m.Id, blog.Id)
+                   //.SetProperty(m => m.Id, blog.Id)
                    .SetProperty(m => m.Name, blog.Name)
                    .SetProperty(m => m.Author, blog.Author)
                    .SetProperty(m => m.Description, blog.Description));

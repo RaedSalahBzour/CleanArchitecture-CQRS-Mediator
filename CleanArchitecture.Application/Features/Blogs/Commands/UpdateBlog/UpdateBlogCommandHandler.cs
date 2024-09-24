@@ -17,7 +17,8 @@ namespace CleanArchitecture.Application.Features.Blogs.Commands.UpdateBlog
         }
         public async Task<int> Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
         {
-            var updateBlog = _mapper.Map<Blog>(request);
+            //var updateBlog = _mapper.Map<Blog>(request);
+            var updateBlog = new Blog() { Id = request.blogId, Name = request.Name, Description = request.Description, Author = request.Author };
 
             return await _blogRepository.UpdateBlogAsync(request.blogId, updateBlog);
         }
